@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:18
+    platform: linux/amd64  # this line to match your pull
+    container_name: ai_interviewer_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: ai_interviewer
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

@@ -9,6 +9,8 @@ venv/
 
 # OS
 .DS_Store
+**/.DS_Store
+
 
 # Env files
 .env
